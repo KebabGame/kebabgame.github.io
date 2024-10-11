@@ -5,12 +5,13 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-top: 25rem;
 }
 #kebap {
 	position: absolute;
 	padding-top: 100px;
 }
-.directional-buttons {
+.directional-buttons{
   width: 16rem;
   height: 16rem;
   display: grid;
