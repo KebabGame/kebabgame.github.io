@@ -11,6 +11,12 @@ body{
 	position: absolute;
 	padding-top: 100px;
 }
+#points{
+	padding: 10px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
 .directional-buttons{
   width: 16rem;
   height: 16rem;
@@ -33,7 +39,7 @@ body{
 }
 
 .direction-button {
-  color: rgb(55, 50, 50);
+  color: rgba(55, 50, 50, 1);
   background: currentcolor;
   border: none;
   position: relative;
