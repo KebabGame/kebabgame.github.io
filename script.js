@@ -70,8 +70,8 @@
 		{	
 			document.getElementById("coin").remove();
 			points = points + 0.50;
-			document.getElementById("points").innerHTML = "Money: " + points.toString() + "€";
-			localStorage.setItem("points", points);
+			document.getElementById("points").innerHTML = "Money: " + points.toString() + " €";
+			localStorage.setItem("points", parseInt(points));
 			spawnCoin();
 		}
 	}
