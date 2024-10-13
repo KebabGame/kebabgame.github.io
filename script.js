@@ -1,6 +1,13 @@
 	spawnCoin();
 	var points = 0;
-	points = localStorage.getItem("points");
+	if(typeof(localStorage.getItem("points")) == "number")
+	{
+		points = parseInt(localStorage.getItem("points"));
+	}
+	else
+	{
+		points = 0;
+	}
 	var a=document.getElementById("kebap");
     a.style.position="absolute";  
     a.style.left="0px";  
@@ -62,7 +69,7 @@
 		if(isOverlapping(a, coin))
 		{	
 			document.getElementById("coin").remove();
-			points = points + 0.5;
+			points = points + 0.50;
 			document.getElementById("points").innerHTML = "Money: " + points.toString() + "€";
 			localStorage.setItem("points", points);
 			spawnCoin();
