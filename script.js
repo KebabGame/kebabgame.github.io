@@ -1,13 +1,7 @@
 	spawnCoin();
-	var points = 0;
-	if(typeof(parseInt(localStorage.getItem("points"))) == "number")
-	{
-		points = parseInt(localStorage.getItem("points"));
-	}
-	else
-	{
-		points = 0;
-	}
+	var money = 0;
+	money = parseFloat(localStorage.getItem("points"));
+	document.getElementById("points").innerHTML = "Money: " + money + " €";
 	var a=document.getElementById("kebap");
     a.style.position="absolute";  
     a.style.left="0px";  
@@ -69,9 +63,9 @@
 		if(isOverlapping(a, coin))
 		{	
 			document.getElementById("coin").remove();
-			points = points + 0.50;
-			document.getElementById("points").innerHTML = "Money: " + points.toString() + " €";
-			localStorage.setItem("points", parseInt(points));
+			money = money + 0.50;
+			document.getElementById("points").innerHTML = "Money: " + money + " €";
+			localStorage.setItem("points", parseInt(money));
 			spawnCoin();
 		}
 	}
