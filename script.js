@@ -55,7 +55,6 @@
 		coin.style.top = y + "px";
 		coin.style.left = x + "px";
 		document.body.appendChild(coin);
-		localStorage.setItem("points", "points");
 	}
 
 	function checkOverlapping()
@@ -65,6 +64,7 @@
 			document.getElementById("coin").remove();
 			points = points + 0.5;
 			document.getElementById("points").innerHTML = "Money: " + points.toString() + "€";
+			localStorage.setItem("points", document.getElementById("points"));
 			spawnCoin();
 		}
 	}
