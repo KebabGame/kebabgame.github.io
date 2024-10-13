@@ -27,7 +27,7 @@
 		checkOverlapping();
     }
 	function isOverlapping(element1, element2) { 
-    const rect1 = element1.getBoundingClientRect(); 
+    const rect1 = element1.getBoundingClientRect();
     const rect2 = element2.getBoundingClientRect(); 
  
     return !( 
@@ -40,13 +40,25 @@
 	function spawnCoin()
 	{
 		var coin = new Image(100, 100);
+		var x = 0;
+		var y = 0;
 		coin.src="coin.png";
 		coin.id = "coin";
 		coin.style.zIndex = -1;
 		coin.style.position = 'absolute';
-		coin.style.top = parseInt(Math.random()*(screen.height-200)) + "px";
-		coin.style.left = parseInt(Math.random()*(screen.width-200)) + "px";
+		const rectKebap = document.getElementById("kebap").getBoundingClientRect();
+		do{
+			y = Math.random()*(screen.height-200);
+			x = Math.random()*(screen.width-200);
+		}while((y>rectKebap.bottom-100 && y<rectKebap.top+100) || (x>rectKebap.left-100 && x<rectKebap.right+100));
+		coin.style.top = y + "px";
+		coin.style.left = x + "px";
 		document.body.appendChild(coin);
+	}
+	
+	function checkRand()
+	{
+		
 	}
 	
 	function checkOverlapping()
@@ -54,8 +66,8 @@
 		if(isOverlapping(a, coin))
 		{	
 			document.getElementById("coin").remove();
-			points++;
-			document.getElementById("points").innerHTML = "Points: " + points.toString();
+			points = points + 0.5;
+			document.getElementById("points").innerHTML = "Money: " + points.toString() + "€";
 			spawnCoin();
 		}
 	}

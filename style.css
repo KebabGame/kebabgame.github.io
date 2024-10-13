@@ -9,7 +9,7 @@ body{
 }
 #kebap {
 	position: absolute;
-	padding-top: 100px;
+	border-style: solid;
 }
 #points{
 	padding: 10px;
