@@ -1,6 +1,6 @@
 	spawnCoin();
 	var points = 0;
-	if(typeof(localStorage.getItem("points")) == "number")
+	if(typeof(parseInt(localStorage.getItem("points"))) == "number")
 	{
 		points = parseInt(localStorage.getItem("points"));
 	}
@@ -13,8 +13,8 @@
     a.style.left="0px";  
     a.style.top="0px";  
     a.style.right="0px";  
-    a.style.down="0px";  
-    function fun(b)  
+    a.style.down="0px";
+    function fun(b)
     {  
         if(b==="left")  
         {  
