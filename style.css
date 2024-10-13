@@ -9,7 +9,6 @@ body{
 }
 #kebap {
 	position: absolute;
-	border-style: solid;
 }
 #points{
 	padding: 10px;
@@ -21,100 +20,30 @@ body{
   width: 16rem;
   height: 16rem;
   display: grid;
-  grid-gap: 0.5rem;
   grid-template-columns: 45fr 60fr 45fr;
   grid-template-rows: 45fr 60fr 45fr;
-  grid-template-areas: "....  up  ....."
-                       "left  ..  right"
-                       ".... down .....";    
+  grid-template-areas: "..... up  ....."
+                       "left  .....  right"
+                       "..... down .....";    
 }
-.visually-hidden {
-  position: absolute !important;
-  height: 1px; 
-  width: 1px;
-  overflow: hidden;
-  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-  clip: rect(1px, 1px, 1px, 1px);
-  white-space: nowrap;
-}
-
 .direction-button {
-  color: rgba(55, 50, 50, 1);
-  background: currentcolor;
+	display: block;
+  color: rgba(50, 50, 50, 0.75);
   border: none;
+  background-color: rgba(0,0,0,0.75);
+  color: rgb(255,255,0);
+  font-size: xxx-large;
   position: relative;
-}
-.direction-button:after {
-  display: block;
-  content: "";
-  position: absolute;
-  border: 2rem solid transparent;
-  color: rgba(255, 250, 250, 0.6);
-}
-.direction-button:before {
-  display: block;
-  content: "";
-  position: absolute;
-  width: 4.25rem;
-  height: 4.25rem;
-  transform: rotate(45deg);
-  background: currentcolor;
-}
-.direction-button:hover {
-  color: rgb(85,55,55);
-}
-.direction-button:active:after {
-  color: rgb(255, 152, 152);
 }
 .up {
   grid-area: up;
-  border-radius: 0.5rem 0.5rem 0 0;
-}
-.up:before {
-  left: calc(50% - 2.125rem);
-  bottom: -2.125rem;
-}
-.up:after {
-  border-bottom-color: currentcolor;
-  left: calc(50% - 2rem);
-  top: -1rem;
 }
 .left {
   grid-area: left;
-  border-radius: 0.5rem 0 0 0.5rem;
-}
-.left:before {
-  right: -2.125rem;
-  top: calc(50% - 2.125rem);
-}
-.left:after {
-  border-right-color: currentcolor;
-  top: calc(50% - 2rem);
-  left: -1rem;
 }
 .right {
   grid-area: right;
-  border-radius: 0 0.5rem 0.5rem 0;
-}
-.right:before {
-  left: -2.125rem;
-  top: calc(50% - 2.125rem);
-}
-.right:after {
-  border-left-color: currentcolor;
-  top: calc(50% - 2rem);
-  right: -1rem;
 }
 .down {
   grid-area: down;
-  border-radius: 0 0 0.5rem 0.5rem;
-}
-.down:before {
-  left: calc(50% - 2.125rem);
-  top: -2.125rem;
-}
-.down:after {
-  border-top-color: currentcolor;
-  left: calc(50% - 2rem);
-  bottom: -1rem;
 }

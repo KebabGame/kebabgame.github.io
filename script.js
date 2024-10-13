@@ -1,6 +1,7 @@
 	spawnCoin();
 	var points = 0;
-	var a=document.getElementById("kebap");  
+	document.getElementById("points").innerHTML = localStorage.getItem("points");
+	var a=document.getElementById("kebap");
     a.style.position="absolute";  
     a.style.left="0px";  
     a.style.top="0px";  
@@ -54,13 +55,9 @@
 		coin.style.top = y + "px";
 		coin.style.left = x + "px";
 		document.body.appendChild(coin);
+		localStorage.setItem("points", "points");
 	}
-	
-	function checkRand()
-	{
-		
-	}
-	
+
 	function checkOverlapping()
 	{
 		if(isOverlapping(a, coin))
