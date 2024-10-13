@@ -1,6 +1,6 @@
 	spawnCoin();
 	var points = 0;
-	document.getElementById("points").innerHTML = localStorage.getItem("points");
+	points = localStorage.getItem("points");
 	var a=document.getElementById("kebap");
     a.style.position="absolute";  
     a.style.left="0px";  
@@ -64,7 +64,7 @@
 			document.getElementById("coin").remove();
 			points = points + 0.5;
 			document.getElementById("points").innerHTML = "Money: " + points.toString() + "€";
-			localStorage.setItem("points", document.getElementById("points"));
+			localStorage.setItem("points", points);
 			spawnCoin();
 		}
 	}
