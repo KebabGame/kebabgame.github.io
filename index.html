@@ -25,12 +25,14 @@
 		</button>
 	</div>
 	<div class="change-food">
-		<p>Change Food: </p>
-		<button class="food-button 0" onclick = changeFood(0)>
-			<img src="kebab.png"/>
-		</button>
-		<button class="food-button 1" onclick = changeFood(1)>
-			<img src="burger.png"/>
-		</button>
+		<button onclick = showChangeFood()>Food</button>
+		<div id="hide" class="hide">
+			<button class="food-button 0" onclick = changeFood(0)>
+				<img src="kebab.png"/>
+			</button>
+			<button class="food-button 1" onclick = changeFood(1)>
+				<img src="burger.png"/>
+			</button>
+		</div>
 	</div>
 </body>

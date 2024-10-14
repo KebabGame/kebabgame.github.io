@@ -49,15 +49,11 @@ body{
 .down {
   grid-area: down;
 }
-
 .change-food{
 	position: absolute;
 	right: 0;
 	top: 0;	
-	display: flex;
-}
-.change-food p{
-	font-size: xx-large;
+	display: grid;
 }
 .food-button img{
 	height: 100px;
