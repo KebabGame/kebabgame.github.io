@@ -5,10 +5,11 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 25rem;
+  padding-top: 25rem;	
 }
-#kebap {
+#kebap{
 	position: absolute;
+	z-index: 1;
 }
 #points{
 	padding: 10px;
@@ -17,6 +18,7 @@ body{
 	left: 0;
 }
 .directional-buttons{
+	z-index: 2;
   width: 16rem;
   height: 16rem;
   display: grid;
@@ -46,4 +48,18 @@ body{
 }
 .down {
   grid-area: down;
+}
+
+.change-food{
+	position: absolute;
+	right: 0;
+	top: 0;	
+	display: flex;
+}
+.change-food p{
+	font-size: xx-large;
+}
+.food-button img{
+	height: 100px;
+	z-index: -1;
 }

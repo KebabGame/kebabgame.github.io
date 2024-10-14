@@ -1,7 +1,5 @@
 	spawnCoin();
 	var money = 0;
-	money = parseFloat(localStorage.getItem("points"));
-	document.getElementById("points").innerHTML = "Money: " + money + " €";
 	var a=document.getElementById("kebap");
     a.style.position="absolute";  
     a.style.left="0px";  
@@ -18,7 +16,7 @@
         {  
                 a.style.left=(parseInt(a.style.left)+50)+"px";  
         }  
-        if(b==="up")  
+        if(b==="up")
         {  
                 a.style.top=(parseInt(a.style.top)-50)+"px";  
         }  
@@ -46,7 +44,7 @@
 		var y = 0;
 		coin.src="coin.png";
 		coin.id = "coin";
-		coin.style.zIndex = -1;
+		coin.style.zIndex = 1;
 		coin.style.position = 'absolute';
 		const rectKebap = document.getElementById("kebap").getBoundingClientRect();
 		do{
@@ -65,7 +63,15 @@
 			document.getElementById("coin").remove();
 			money = money + 0.50;
 			document.getElementById("points").innerHTML = "Money: " + money + " €";
-			localStorage.setItem("points", parseInt(money));
 			spawnCoin();
+		}
+	}
+	
+	function changeFood(g)
+	{
+		switch(g)
+		{
+			case 0: a.src = "kebab.png"; break;
+			case 1: a.src = "burger.png"; break;
 		}
 	}
