@@ -9,7 +9,37 @@
 		kebap.style.left = "100px"; kebap.style.top = "100px"; //sets some style settings
 	spawnCoin(); //spawns the first coin
 	
+	//Connect to Database
+	var mysql = require("mysql");
+	var hostname = "sql7.freesqldatabase.com";
+	var database = "sql7738067";
+	var port ="3306";
+	var username = "sql7738067";
+	var password = "7aaNn2lMYm";
+	var con = mysql.createConnection({
+		host: hostname,
+		user: username,
+		password: password
+	});
+	con.connect(function (err) {
+		if (err) throw err;
+		con.query("SELECT * FROM users", function (err, result, fields) {
+			if (err) throw err;
+			if(result.user !== Clerk.user)
+			{
+				con.query("INSERT INTO users (user, money) VALUES (?, ?))", [Clerk.user, money], function (err, result) {
+					if (err) throw err;
+				});
+			}
+			else
+			{
+				money = result.money;
+			}
+		});
+	});
+	
 	//Functions
+	
 	function isOverlapping(element1, element2) //Checks if two element are overlapping
 	{
 		const rect1 = element1.getBoundingClientRect();
@@ -20,6 +50,17 @@
 			rect1.bottom < rect2.top ||    // Element 1 is above Element 2 
 			rect1.top > rect2.bottom       // Element 1 is below Element 2 
 		); 
+	}
+	
+	function showChangeFood()
+	{
+		var x = document.getElementById("hide");
+		if (x.style.display === "none") 
+		{
+			x.style.display = "block";
+		} else {
+			x.style.display = "none";
+		}
 	}
 	
 	function changeFood(g) //changes the food by changing it's image
@@ -77,6 +118,9 @@
 		{
 			money = money + 0.50;
 		}
+		/**con.query("UPDATE users SET money = ? WHERE user = ?", [money, Clerk.user], function (err, result) {
+			if (err) throw err;
+		});*/
 		document.getElementById("points").innerHTML = "Money: " + money + " €";
 	}
 	
