@@ -2,6 +2,7 @@
 	The Kebab Game -- kebapSite.github.io
 	Made by Dennis2008
 	*/
+	var USER;
 	var money = 0;
 	var typeOfCoin = 1;
 	var coin = new Image(100, 100);
@@ -25,9 +26,9 @@
 		if (err) throw err;
 		con.query("SELECT * FROM users", function (err, result, fields) {
 			if (err) throw err;
-			if(result.user !== Clerk.user)
+			if(result.user !== USER)
 			{
-				con.query("INSERT INTO users (user, money) VALUES (?, ?))", [Clerk.user, money], function (err, result) {
+				con.query("INSERT INTO users (user, money) VALUES (?, ?))", [USER, money], function (err, result) {
 					if (err) throw err;
 				});
 			}
@@ -118,7 +119,7 @@
 		{
 			money = money + 0.50;
 		}
-		/**con.query("UPDATE users SET money = ? WHERE user = ?", [money, Clerk.user], function (err, result) {
+		/**con.query("UPDATE users SET money = ? WHERE user = ?", [money, USER], function (err, result) {
 			if (err) throw err;
 		});*/
 		document.getElementById("points").innerHTML = "Money: " + money + " €";
