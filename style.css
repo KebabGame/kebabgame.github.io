@@ -12,10 +12,9 @@ body{
 	z-index: 1;
 }
 #points{
-	padding: 10px;
 	position: absolute;
-	top: 0;
-	left: 0;
+	top: 0px;
+	left: 75px;
 }
 .directional-buttons{
 	z-index: 2;
@@ -58,4 +57,11 @@ body{
 .food-button img{
 	height: 100px;
 	z-index: -1;
+}
+
+#app{
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 20px;
 }

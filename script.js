@@ -2,12 +2,11 @@
 	The Kebab Game -- kebapSite.github.io
 	Made by Dennis2008
 	*/
-	
 	var money = 0;
 	var typeOfCoin = 1;
 	var coin = new Image(100, 100);
 	var kebap = document.getElementById("kebap"); //gets the html element of kebap
-		kebap.style.left = "0px"; kebap.style.top = "0px"; //sets some style settings
+		kebap.style.left = "100px"; kebap.style.top = "100px"; //sets some style settings
 	spawnCoin(); //spawns the first coin
 	
 	//Functions
