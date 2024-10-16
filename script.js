@@ -9,7 +9,11 @@
 	var kebap = document.getElementById("kebap"); //gets the html element of kebap
 		kebap.style.left = "100px"; kebap.style.top = "100px"; //sets some style settings
 	spawnCoin(); //spawns the first coin
+	document.addEventListener("keydown", function (e) {
+		fun(e.code);
+	});
 	
+	/**
 	//Connect to Database
 	var mysql = require("mysql");
 	var hostname = "sql7.freesqldatabase.com";
@@ -37,7 +41,7 @@
 				money = result.money;
 			}
 		});
-	});
+	});	*/
 	
 	//Functions
 	
@@ -75,19 +79,19 @@
 	
 	function fun(b) //checks the button's input and moves the kebap
     {  
-        if(b==="left")  
+        if(b==="ArrowLeft")
         {  
-            kebap.style.left=(parseInt(kebap.style.left)-50)+"px";  
+            kebap.style.left=(parseInt(kebap.style.left)-50)+"px";
         }  
-        if(b==="right")  
+        if(b==="ArrowRight")  
         {  
-                kebap.style.left=(parseInt(kebap.style.left)+50)+"px";  
+                kebap.style.left=(parseInt(kebap.style.left)+50)+"px";
         }  
-        if(b==="up")
+        if(b==="ArrowUp")
         {  
-                kebap.style.top=(parseInt(kebap.style.top)-50)+"px";  
+                kebap.style.top=(parseInt(kebap.style.top)-50)+"px";
         }  
-        if(b==="down")  
+        if(b==="ArrowDown")  
         {  
                 kebap.style.top=(parseInt(kebap.style.top)+50)+"px";  
         }
