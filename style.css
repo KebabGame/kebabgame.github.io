@@ -1,11 +1,9 @@
-*{
-	padding: 0;
-}
 body{
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 25rem;	
+  padding-top: 25rem;
+  height: 100vh;
 }
 #kebap{
 	position: absolute;
@@ -71,4 +69,9 @@ body{
 	height: 50px;
 	width: 150px;
 	right: 0;
+}
+
+#timer{
+	position:absolute;
+	top:0;
 }

@@ -5,6 +5,7 @@
 	var USER;
 	var money = 0;
 	var typeOfCoin = 1;
+	var timeCounter = 0;
 	var coin = new Image(100, 100);
 	var kebap = document.getElementById("kebap"); //gets the html element of kebap
 		kebap.style.left = "100px"; kebap.style.top = "100px"; //sets some style settings
@@ -12,6 +13,10 @@
 	document.addEventListener("keydown", function (e) {
 		fun(e.code);
 	});
+	setInterval(function (){
+		document.getElementById("timer").innerHTML = "Timer: " + timeCounter + "s";
+		timeCounter = timeCounter + 1;
+	}, 1000);
 	
 	/**
 	//Connect to Database
@@ -151,7 +156,7 @@
 	{
 		const rectKebap = kebap.getBoundingClientRect();
 		do{
-			y = Math.random()*(screen.height-200);
+			y = Math.random()*(screen.height-250);
 			x = Math.random()*(screen.width-200);
 		}
 		while((y>rectKebap.bottom-100 && y<rectKebap.top+100) || (x>rectKebap.left-100 && x<rectKebap.right+100));
