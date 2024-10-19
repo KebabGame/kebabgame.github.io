@@ -3,7 +3,7 @@ body{
   align-items: center;
   justify-content: center;
   padding-top: 25rem;
-  height: 100vh;
+  height: 100%;
 }
 #kebap{
 	position: absolute;
