@@ -5,17 +5,26 @@
 	var USER;
 	var money = 0;
 	var typeOfCoin = 1;
-	var timeCounter = 0;
+	var seconds = 0;
+	var minutes = 0;
 	var coin = new Image(100, 100);
+	var showMoneyAdded = new Image(100, 75);
 	var kebap = document.getElementById("kebap"); //gets the html element of kebap
-		kebap.style.left = "100px"; kebap.style.top = "100px"; //sets some style settings
+		kebap.style.left = "100px"; kebap.style.top = "100px";//sets some style settings
+	
 	spawnCoin(); //spawns the first coin
+	
 	document.addEventListener("keydown", function (e) {
 		fun(e.code);
 	});
 	setInterval(function (){
-		document.getElementById("timer").innerHTML = "Timer: " + timeCounter + "s";
-		timeCounter = timeCounter + 1;
+		document.getElementById("timer").innerHTML = "Timer: " + minutes + "min and " + seconds + "s";
+		seconds += 1;
+		if(seconds == 60)
+		{
+			minutes += 1;
+			seconds = 0;
+		}
 	}, 1000);
 	
 	/**
@@ -64,12 +73,12 @@
 	
 	function showChangeFood()
 	{
-		var x = document.getElementById("hide");
-		if (x.style.display === "none") 
+		var hide = document.getElementById("hide");
+		if (hide.style.display === "none") 
 		{
-			x.style.display = "block";
+			hide.style.display = "block";
 		} else {
-			x.style.display = "none";
+			hide.style.display = "none";
 		}
 	}
 	
@@ -115,6 +124,16 @@
 	
 	function deleteCoin() //Deletes the coin
 	{
+		if(typeOfCoin==0)
+		{
+			showMoneyAdded.src = "+1euro.png";
+		}
+		else
+		{
+			showMoneyAdded.src = "+0.5euro.png";
+		}
+		showMoneyAdded.id = "addedMoney";
+		document.body.appendChild(showMoneyAdded);
 		document.getElementById("coin").remove();
 	}
 	

@@ -4,6 +4,7 @@ body{
   justify-content: center;
   padding-top: 25rem;
   height: 100%;
+  background-color: rgba(0,0,0,0.75);
 }
 #kebap{
 	position: absolute;
@@ -13,8 +14,12 @@ body{
 	position: absolute;
 	top: 0px;
 	left: 20px;
+	color: white;
 }
 .directional-buttons{
+	position: absolute;
+	left: 50%-margin-right;
+	top: 60%;
 	z-index: 2;
   width: 16rem;
   height: 16rem;
@@ -57,10 +62,15 @@ body{
 	z-index: -1;
 }
 
+.food-button{
+	background-color: black;
+}
+
 #hide{
 	position: absolute;
 	right: 0;
 	top: 50px;
+	display:none;
 }
 
 #hideButton{
@@ -69,9 +79,18 @@ body{
 	height: 50px;
 	width: 150px;
 	right: 0;
+	background-color: black;
+	color: white;
 }
 
 #timer{
 	position:absolute;
 	top:0;
+	color: white;
+}
+
+#addedMoney{
+	position: absolute;
+	top: 72%;
+	z-index: 2;
 }
