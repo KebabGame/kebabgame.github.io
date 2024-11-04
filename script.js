@@ -8,7 +8,6 @@
 	var seconds = 0;
 	var minutes = 0;
 	var coin = new Image(100, 100);
-	var showMoneyAdded = new Image(100, 75);
 	var kebap = document.getElementById("kebap"); //gets the html element of kebap
 		kebap.style.left = "100px"; kebap.style.top = "100px";//sets some style settings
 	
@@ -25,7 +24,7 @@
 			minutes += 1;
 			seconds = 0;
 		}
-	}, 1000);ù
+	}, 1000);
 	
 	//Functions
 	
@@ -94,16 +93,6 @@
 	
 	function deleteCoin() //Deletes the coin
 	{
-		if(typeOfCoin==0)
-		{
-			showMoneyAdded.src = "+1euro.png";
-		}
-		else
-		{
-			showMoneyAdded.src = "+0.5euro.png";
-		}
-		showMoneyAdded.id = "addedMoney";
-		document.body.appendChild(showMoneyAdded);
 		document.getElementById("coin").remove();
 	}
 	
