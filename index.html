@@ -4,37 +4,13 @@
 	<title>kebap</title>
 	<meta charset="utf-8">  
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="style.css" />
+	<link rel="stylesheet" href="index.css" />
 </html>
 <body>
-	<div id="app"></div>
-	<img id="kebap" src="kebab.png"/>
-	<h1 id="points">Money: 0 €</h1>
-	<h1 id="timer">by Dennis2008</h1>
-	<script src="script.js"></script>
-	<div class="directional-buttons">
-		<button id="btnup" class="direction-button up" onclick = fun("ArrowUp")>
-			&#8593
-		</button>
-		<button id="btnleft" class="direction-button left" onclick = fun("ArrowLeft")>
-			&#8592
-		</button>
-		<button id="btnright" class="direction-button right" onclick = fun("ArrowRight")>
-			&#8594
-		</button>
-		<button id="btndown" class="direction-button down" onclick = fun("ArrowDown")>
-			&#8595
-		</button>
-	</div>
-	<div class="change-food">
-		<button id="hideButton" onclick = showChangeFood()>Food</button>
-		<div id="hide">
-			<button class="food-button 0" onclick = changeFood(0)>
-				<img src="kebab.png"/>
-			</button>
-			<button class="food-button 1" onclick = changeFood(1)>
-				<img src="burger.png"/>
-			</button>
-		</div>
+	<div id="playButton">
+		<a href="https://kebapsite.github.io/game">
+			<img src="playButton.png">
+			<p id="play">Play</p>
+		</a>
 	</div>
 </body>

@@ -1,0 +1,40 @@
+body
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 25rem;
+  height: 100%;
+  background-color: rgba(0,0,0,0.75);
+}
+
+#playButton
+{
+	position: absolute;
+	display: flex;
+}
+
+#playButton img
+{
+	width: 200px;
+	position: absolute;
+	left: -85px;
+	top: -10px;
+}
+
+#playButton a
+{
+	position: absolute;
+	display: flex;
+	text-decoration: none;
+	color: black;
+}
+
+#play
+{
+	position: absolute;
+	z-index: 1;
+	font-size: xx-large;
+	left: -15px;
+	top: -20px;
+}
