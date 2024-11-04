@@ -25,37 +25,7 @@
 			minutes += 1;
 			seconds = 0;
 		}
-	}, 1000);
-	
-	/**
-	//Connect to Database
-	var mysql = require("mysql");
-	var hostname = "sql7.freesqldatabase.com";
-	var database = "sql7738067";
-	var port ="3306";
-	var username = "sql7738067";
-	var password = "7aaNn2lMYm";
-	var con = mysql.createConnection({
-		host: hostname,
-		user: username,
-		password: password
-	});
-	con.connect(function (err) {
-		if (err) throw err;
-		con.query("SELECT * FROM users", function (err, result, fields) {
-			if (err) throw err;
-			if(result.user !== USER)
-			{
-				con.query("INSERT INTO users (user, money) VALUES (?, ?))", [USER, money], function (err, result) {
-					if (err) throw err;
-				});
-			}
-			else
-			{
-				money = result.money;
-			}
-		});
-	});	*/
+	}, 1000);ù
 	
 	//Functions
 	
