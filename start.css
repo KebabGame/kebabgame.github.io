@@ -7,6 +7,12 @@ body
 	background-color: rgba(0,0,0,0.75);
 }
 
+#kebap
+{
+	position: absolute;
+	z-index: 1;
+}
+
 #title
 {
 	position: absolute;

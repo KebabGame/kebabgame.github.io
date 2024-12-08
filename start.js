@@ -44,11 +44,11 @@
 		typeOfCoin = parseInt(Math.random() * 5);
 		if(typeOfCoin==0)
 		{
-			coin.src = "../resources/coin1.png";
+			coin.src = "resources/coin1.png";
 		}
 		else
 		{
-			coin.src = "../resources/coin.png";
+			coin.src = "resources/coin.png";
 		}
 		coin.id = "coin";
 		coin.style.zIndex = 1;
