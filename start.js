@@ -2,6 +2,7 @@
 	The Kebab Game -- kebapSite.github.io
 	Made by Dennis2008
 	*/
+	
 	var coin = new Image(100, 100);
 	var kebap = document.getElementById("kebap"); //gets the html element of kebap
 		kebap.style.left = "100px"; kebap.style.top = "100px"; //sets some style settings
@@ -72,9 +73,4 @@
 		createCoin();
 		createCoinPosition();
 		document.body.appendChild(coin);
-	}
-	
-	function moveKebab()
-	{
-		if()
 	}

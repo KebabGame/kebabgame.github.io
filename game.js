@@ -2,7 +2,6 @@
 	The Kebab Game -- kebapSite.github.io
 	Made by Dennis2008
 	*/
-	var USER;
 	var money = 0;
 	var typeOfCoin = 1;
 	var seconds = 0;
@@ -55,8 +54,8 @@
 	{
 		switch(g)
 		{
-			case 0: kebap.src = "kebab.png"; break;
-			case 1: kebap.src = "burger.png"; break;
+			case 0: kebap.src = "resources/kebab.png"; break;
+			case 1: kebap.src = "resources/burger.png"; break;
 		}
 	}
 	
@@ -116,11 +115,11 @@
 		typeOfCoin = parseInt(Math.random() * 5);
 		if(typeOfCoin==0)
 		{
-			coin.src = "coin1.png";
+			coin.src = "resources/coin1.png";
 		}
 		else
 		{
-			coin.src = "coin.png";
+			coin.src = "resources/coin.png";
 		}
 		coin.id = "coin";
 		coin.style.zIndex = 1;
