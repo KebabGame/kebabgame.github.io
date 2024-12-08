@@ -1,0 +1,57 @@
+body
+{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	background-color: rgba(0,0,0,0.75);
+}
+
+#title
+{
+	position: absolute;
+	top: 50px;
+	left: 50%;
+	margin-left: -125px;
+	scale: 2;
+}
+#credits
+{
+	position: absolute;
+	top: 100px;
+	left: 50%;
+	margin-left: -45px;
+}
+
+#playButton
+{
+	position: absolute;
+	top: 50%;
+	display: flex;
+	scale: 2;
+}
+
+#playButton img
+{
+	width: 200px;
+	position: absolute;
+	left: -100px;
+	top: -10px;
+}
+
+#playButton a
+{
+	position: absolute;
+	display: flex;
+	text-decoration: none;
+	color: black;
+}
+
+#play
+{
+	position: absolute;
+	z-index: 1;
+	font-size: xx-large;
+	left: -25px;
+	top: -20px;
+}

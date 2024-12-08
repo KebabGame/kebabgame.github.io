@@ -9,7 +9,7 @@
 	var minutes = 0;
 	var coin = new Image(100, 100);
 	var kebap = document.getElementById("kebap"); //gets the html element of kebap
-		kebap.style.left = "100px"; kebap.style.top = "100px";//sets some style settings
+		kebap.style.left = "100px"; kebap.style.top = "100px"; //sets some style settings
 	
 	spawnCoin(); //spawns the first coin
 	
@@ -66,15 +66,15 @@
         {  
             kebap.style.left=(parseInt(kebap.style.left)-50)+"px";
         }  
-        if(b==="ArrowRight")  
+        else if(b==="ArrowRight")  
         {  
                 kebap.style.left=(parseInt(kebap.style.left)+50)+"px";
         }  
-        if(b==="ArrowUp")
+        else if(b==="ArrowUp")
         {  
                 kebap.style.top=(parseInt(kebap.style.top)-50)+"px";
         }  
-        if(b==="ArrowDown")  
+        else if(b==="ArrowDown")  
         {  
                 kebap.style.top=(parseInt(kebap.style.top)+50)+"px";  
         }
@@ -106,9 +106,6 @@
 		{
 			money = money + 0.50;
 		}
-		/**con.query("UPDATE users SET money = ? WHERE user = ?", [money, USER], function (err, result) {
-			if (err) throw err;
-		});*/
 		document.getElementById("points").innerHTML = "Money: " + money + " €";
 	}
 	
