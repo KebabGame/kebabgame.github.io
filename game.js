@@ -9,8 +9,10 @@
 	var coin = new Image(100, 100);
 	var kebap = document.getElementById("kebap"); //gets the html element of kebap
 		kebap.style.left = "100px"; kebap.style.top = "100px"; //sets some style settings
+	var fork = new Image(100, 100);
 	
 	spawnCoin(); //spawns the first coin
+	//spawnFork();
 	
 	document.addEventListener("keydown", function (e) {
 		fun(e.code);
@@ -26,6 +28,18 @@
 	}, 1000);
 	
 	//Functions
+	
+	function spawnFork()
+	{
+		if(!forkSpawned && money>=1)
+		{
+			fork.id = "fork";
+			fork.src = "fork.png";
+			fork.style.zIndex = 1;
+			fork.style.position = 'absolute';
+			document.body.appendChild(fork);
+		}
+	}
 	
 	function isOverlapping(element1, element2) //Checks if two element are overlapping
 	{
@@ -61,19 +75,19 @@
 	
 	function fun(b) //checks the button's input and moves the kebap
     {  
-        if(b==="ArrowLeft")
+        if(b=="ArrowLeft")
         {  
             kebap.style.left=(parseInt(kebap.style.left)-50)+"px";
         }  
-        else if(b==="ArrowRight")  
+        else if(b=="ArrowRight")  
         {  
                 kebap.style.left=(parseInt(kebap.style.left)+50)+"px";
         }  
-        else if(b==="ArrowUp")
+        else if(b=="ArrowUp")
         {  
                 kebap.style.top=(parseInt(kebap.style.top)-50)+"px";
         }  
-        else if(b==="ArrowDown")  
+        else if(b=="ArrowDown")  
         {  
                 kebap.style.top=(parseInt(kebap.style.top)+50)+"px";  
         }
