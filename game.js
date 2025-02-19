@@ -3,11 +3,11 @@
 	Made by Dennis2008
 	*/
 	let money = 0;
-		let typeOfCoin = 1;
-		let seconds = 0, minutes = 0;
-		let coin = new Image(100, 100);
-		let kebap = document.getElementById("kebap"); //gets the html element of kebap
-			kebap.style.left = "100px"; kebap.style.top = "100px"; //sets some style settings
+	let typeOfCoin = 1;
+	let seconds = 0, minutes = 0;
+	let coin = new Image(100, 100);
+	let kebap = document.getElementById("kebap"); //gets the html element of kebap
+		kebap.style.left = "100px"; kebap.style.top = "100px"; //sets some style settings
 	main();
 	
 	function main()
@@ -20,6 +20,7 @@
 		window.addEventListener("keydown", function(e) {
 			move(e.code);
 		});
+		
 		setInterval(function (){
 			document.getElementById("timer").innerHTML = "Timer: " + minutes + "min and " + seconds + "s";
 			seconds++;
@@ -29,23 +30,33 @@
 				seconds = 0;
 			}
 		}, 1000);
-		}
+	}
 	
-	function move(b) { //checks the button's input and moves the kebap
-        if(b=="ArrowLeft") {  
-            //while(b=="ArrowLeft") { //???
+	function move(b) { //checks the button's input and moves the kebab
+		if(b=="ArrowLeft" || b=="KeyA") {  
 			kebap.style.left=(parseInt(kebap.style.left)-50)+"px";
-			//}
         }  
-        else if(b=="ArrowRight") {  
+        else if(b=="ArrowRight" || b=="KeyD") {  
             kebap.style.left=(parseInt(kebap.style.left)+50)+"px";
         }  
-        else if(b=="ArrowUp") {  
+        else if(b=="ArrowUp" || b=="KeyW") {  
             kebap.style.top=(parseInt(kebap.style.top)-50)+"px";
         }  
-        else if(b=="ArrowDown") {  
-            kebap.style.top=(parseInt(kebap.style.top)+50)+"px";  
+        else if(b=="ArrowDown" || b=="KeyS") {  
+            kebap.style.top=(parseInt(kebap.style.top)+50)+"px";
         }
+		else if(b=="Digit1")
+		{
+			changeFood(0);
+		}
+		else if(b=="Digit2")
+		{
+			changeFood(1);
+		}
+		else if(b=="Digit3")
+		{
+			changeFood(2);
+		}
 		checkCoin(); //calls checkOverlapping()
     }
 	
@@ -138,5 +149,6 @@
 		switch(g) {
 			case 0: kebap.src = "resources/kebab.png"; break;
 			case 1: kebap.src = "resources/burger.png"; break;
+			case 2: kebap.src = "resources/curry.jpg"; break;
 		}
 	}
