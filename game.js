@@ -149,6 +149,6 @@
 		switch(g) {
 			case 0: kebap.src = "resources/kebab.png"; break;
 			case 1: kebap.src = "resources/burger.png"; break;
-			case 2: kebap.src = "resources/curry.jpg"; break;
+			case 2: kebap.src = "resources/curry.png"; break;
 		}
 	}
