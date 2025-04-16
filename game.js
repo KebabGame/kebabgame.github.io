@@ -2,6 +2,26 @@
 	The Kebab Game -- https://kebapSite.github.io
 	Made by Dennis2008
 	*/
+	
+	import { createClient } from 'redis';
+
+	const client = createClient({
+		username: 'default',
+		password: '*******',
+		socket: {
+			host: 'redis-10057.c328.europe-west3-1.gce.redns.redis-cloud.com',
+			port: 10057
+		}
+	});
+
+	client.on('error', err => console.log('Redis Client Error', err));
+
+	await client.connect();
+
+	await client.set('foo', 'bar');
+	const result = await client.get('foo');
+	console.log(result)  // >>> bar
+	
 	let money = 0;
 	let typeOfCoin = 1;
 	let seconds = 0, minutes = 0;
