@@ -7,7 +7,7 @@
 
 	const client = createClient({
 		username: 'default',
-		password: '*******',
+		password: '$DB_PASSWORD',
 		socket: {
 			host: 'redis-10057.c328.europe-west3-1.gce.redns.redis-cloud.com',
 			port: 10057
