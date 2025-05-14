@@ -3,7 +3,7 @@
 	Made by Dennis2008
 	*/
 	
-	import { createClient } from 'redis';
+	/*import { createClient } from 'redis';
 
 	const client = createClient({
 		username: 'default',
@@ -20,7 +20,7 @@
 
 	await client.set('foo', 'bar');
 	const result = await client.get('foo');
-	console.log(result)  // >>> bar
+	console.log(result)  // >>> bar*/
 	
 	let money = 0;
 	let typeOfCoin = 1;
