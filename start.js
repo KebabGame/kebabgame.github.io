@@ -1,5 +1,5 @@
-	/**
-	The Kebab Game -- kebapSite.github.io
+	/*
+	The Kebab Game -- https://kebabgame.github.io
 	Made by Dennis2008
 	*/
 	

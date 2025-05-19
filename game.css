@@ -1,74 +1,78 @@
-body
-{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-top: 25rem;
-  height: 100%;
-  overflow: hidden;
-  background-color: rgba(0,0,0,1);
-}
-#bgimage
-{
-	position: absolute;
-	top: 0;
-	right: 0;
-	height: 100%;
-	width: 100%;
-	opacity: 0.5;
-}
-#kebap
-{
-	position: absolute;
-	z-index: 1;
-}
-#points
-{
-	position: absolute;
-	top: 0px;
-	left: 20px;
-	color: white;
-}
-.change-food{
-	position: absolute;
-	right: 0;
-	top: 0;	
-	display: grid;
-}
-.food-button img{
-	height: 100px;
-	z-index: -1;
-}
+@media screen and (min-width: 1224px){
+	body
+	{
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	  padding-top: 25rem;
+	  height: 100%;
+	  overflow: hidden;
+	  background-color: rgba(0,0,0,1);
+	}
+	#bgimage
+	{
+		position: absolute;
+		top: 0;
+		right: 0;
+		height: 100%;
+		width: 100%;
+		opacity: 0.5;
+	}
+	#kebap
+	{
+		position: absolute;
+		z-index: 1;
+	}
+	#points
+	{
+		position: absolute;
+		top: 0px;
+		left: 20px;
+		color: white;
+	}
+	.change-food{
+		position: absolute;
+		right: 0;
+		top: 0;	
+		display: grid;
+	}
+	.food-button img{
+		height: 100px;
+		z-index: -1;
+	}
 
-.food-button{
-	background-color: black;
-}
+	.food-button{
+		background-color: black;
+	}
 
-#hide{
-	position: absolute;
-	right: 0;
-	top: 50px;
-	display:none;
-}
+	#hide{
+		position: absolute;
+		right: 0;
+		top: 50px;
+		display:none;
+	}
 
-#hideButton{
-	position: absolute;
-	padding: 10px;
-	height: 50px;
-	width: 150px;
-	right: 0;
-	background-color: black;
-	color: white;
-}
+	#hideButton{
+		position: absolute;
+		padding: 10px;
+		height: 50px;
+		width: 150px;
+		right: 0;
+		background-color: black;
+		color: white;
+	}
 
-#timer{
-	position:absolute;
-	top:0;
-	color: white;
-}
+	#timer{
+		position:absolute;
+		top:0;
+		color: white;
+	}
 
-#addedMoney{
-	position: absolute;
-	top: 72%;
-	z-index: 2;
+	#addedMoney{
+		position: absolute;
+		top: 72%;
+		z-index: 2;
+	}
+}
+@media screen and (min-width: 320px){
 }
